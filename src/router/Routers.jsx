@@ -6,13 +6,17 @@ import AboutUs from '../pages/AboutUs'
 import Page404 from '../pages/Page404'
 import Footer from '../components/Footer'
 import LiveStreaming from '../pages/LiveStreaming'
+import Exhibition from '../pages/Exhibition'
+import Contact from '../pages/Contact'
 
 const Routers = () => {
   return (
     <Routes>
         <Route path="/" exact element={<><Header /><HomePage /><Footer /></>} />
         <Route path="/about_us" exact element={<><Header /><AboutUs /><Footer /></>} />
+        <Route path="/exhibition" exact element={<><Exhibition /><Footer /></>} />
         <Route path="/live_streaming" exact element={<><Header /><LiveStreaming /><Footer /></>} />
+        <Route path="/contact" exact element={<><Header /><Contact /><Footer /></>} />
         <Route path="/*"  element={<><Page404 /></>} />
     </Routes>
   )

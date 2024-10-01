@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import mumbai from "../assets/mumbai.png";
 import nurturing from "../assets/nurturing_ventures.png";
 import empowering from "../assets/empowering_ethical_growth.png";
@@ -7,8 +7,15 @@ import map from "../assets/map.png";
 import Icons from '../components/Icons';
 import blog1 from "../assets/blog1.png"
 import blog2 from "../assets/blog2.png";
+import { useRecoilState } from 'recoil';
+import { navigateState } from '../state/AppAtom';
 
 const AboutUs = () => {
+    const [navigate, setNavigate] = useRecoilState(navigateState);
+
+    useEffect(()=>{
+      setNavigate("About Us")
+    },[])
   return (
     <div className="flex flex-col items-center w-full gap-y-[70px]">
       <div className="flex flex-col items-center w-full">

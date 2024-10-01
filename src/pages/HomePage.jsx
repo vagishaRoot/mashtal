@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
 import photo1 from "../assets/photo_1.png";
 import photo2 from "../assets/photo_2.png";
@@ -13,9 +13,16 @@ import photo6 from "../assets/photo6.png"
 import Icons from "../components/Icons";
 import blog1 from "../assets/blog1.png"
 import blog2 from "../assets/blog2.png";
+import { useRecoilState } from "recoil";
+import { navigateState } from "../state/AppAtom";
 
 
 const HomePage = () => {
+    const [navigate, setNavigate] = useRecoilState(navigateState);
+
+    useEffect(()=>{
+        setNavigate("Home")
+    },[])
   return (
     <div className="flex w-full flex-col items-center gap-y-3">
       {/* <Header /> */}

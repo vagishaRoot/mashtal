@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import mumbai from "../assets/mumbai.png";
 import pune from "../assets/pune.png";
 import Select from "react-select";
@@ -8,6 +8,8 @@ import delhi from "../assets/delhi.png";
 import bengaluru from "../assets/bengaluru.png";
 import kolkata from "../assets/kolkata.png";
 import Icons from "../components/Icons";
+import { useRecoilState } from "recoil";
+import { navigateState } from "../state/AppAtom";
 
 const options = [
   { value: "January", label: "January" },
@@ -17,6 +19,11 @@ const options = [
 
 const LiveStreaming = () => {
   const [selectedOption, setSelectedOption] = useState(null);
+  const [navigate, setNavigate] = useRecoilState(navigateState);
+
+  useEffect(()=>{
+    setNavigate("Live Streaming")
+  },[])
   const handleChange = () => {};
   return (
     <div className="flex flex-col w-full items-center">
@@ -79,7 +86,7 @@ const LiveStreaming = () => {
             </div>
             <div className="text-2xl font-[800] uppercase text-outfit">Video Streaming</div>
           </div>
-          <div className="bg-[#F8F8F8] w-full py-[20px] px-[30px] flex justify-between">
+          <div className="bg-[#F8F8F8] w-full py-[20px] px-[30px] flex justify-between rounded-[10px]">
             <div className="flex gap-x-[10px] items-center">
               <div className="text-[#565972]">Select Month: </div>
               <div className="pr-[10px]">

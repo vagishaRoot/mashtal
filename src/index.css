@@ -150,3 +150,9 @@ body{
 .css-1u9des2-indicatorSeparator{
   display: none;
 }
+
+.text-gradient{
+  background: linear-gradient(90.98deg, #FF0000 4.17%, #EA00FF 46.56%, #FFD900 98.21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
