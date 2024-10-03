@@ -48,7 +48,7 @@ const Header = () => {
                 </div>
                 <div className="flex gap-x-[25px] items-center">
                     <Icons string="search" />
-                    <button className='text-white px-[15px] py-[5px] bg-[#DB6D8F] text-poppins'>Registrar</button>
+                    <Link className='text-white hover:text-white px-[15px] py-[5px] bg-[#DB6D8F] text-poppins rounded-[10px]' to="/register">Registrar</Link>
                 </div>
             </div>
         </div>

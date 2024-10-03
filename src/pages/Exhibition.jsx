@@ -17,7 +17,7 @@ const Exhibition = () => {
   return (
     <>
       <div className="flex w-full flex-col items-center gap-y-3 relative">
-        <Header />
+        
         <div className="flex w-full justify-center">
           <div className="w-[80%] flex items-center justify-center">
             <div className="flex flex-col gap-y-[15px] w-1/2">
@@ -75,7 +75,7 @@ const Exhibition = () => {
             </div>
           </div>
         </div>
-        <div className="absolute w-full h-[100vh] top-0 left-0 bg-[#00000033] flex items-center justify-center">
+        <div className="absolute w-full h-full top-0 left-0 bg-[#00000033] flex items-center justify-center">
             <div className="p-[15px] bg-[#F9FBFF] rounded-[10px] flex justify-between w-[900px]">
                 <div className="w-[450px] flex flex-col">
                     <div className="w-full flex">
@@ -141,7 +141,7 @@ const Exhibition = () => {
                         </div>
                     </div>
                     <div className="font-semibold text-outfit">New Update</div>
-                    <div className="w-full h-full border border-black overflow-y-auto p-[10px]">
+                    <div className="w-full h-[140px] border border-black overflow-y-auto p-[10px]">
                         <div className="text-[#001077] pb-[2px] border-b border-[#E2E2E2] text-sm">
                             Lorem ipsum dolor sit amet
                             <span className="text-gradient font-[700] px-[4px]">New</span>
@@ -153,6 +153,9 @@ const Exhibition = () => {
                         <div className="text-[#001077] pb-[2px] pt-[3px] border-b border-[#E2E2E2] text-sm">
                             Consectetur adipiscing elit, sed do 
                             <span className="text-gradient font-[700] px-[4px]">New</span>
+                        </div>
+                        <div className="text-[#001077] pb-[2px] pt-[3px] border-b border-[#E2E2E2] text-sm">
+                            Elit consectetur adipiscing
                         </div>
                         <div className="text-[#001077] pb-[2px] pt-[3px] border-b border-[#E2E2E2] text-sm">
                             Elit consectetur adipiscing
