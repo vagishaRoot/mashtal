@@ -38,3 +38,10 @@
 .read-the-docs {
   color: #888;
 }
+
+.gallery-image .play-button{
+  display: none;
+}
+.gallery-image:hover .play-button{
+  display: flex;
+}

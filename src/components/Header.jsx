@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <>
         <div className="w-full flex justify-center items-center pb-2" id="topHeader">
-            <div className="w-[85%] flex justify-between items-center">
+            <div className="w-[85%] flex justify-between items-center max-1440:w-[95%]">
                 <div className="flex gap-x-[70px] items-center">
                     <img src={logo} className="h-[70px]" />
                     <div className="flex gap-x-2">
