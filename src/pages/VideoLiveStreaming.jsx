@@ -24,6 +24,10 @@ const VideoLiveStreaming = () => {
   useEffect(() => {
     setNavigate("Live Streaming");
   }, []);
+  useEffect(() => {
+    let secondDiv = document.getElementById("topHeader");
+    secondDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
   return (
     <>
       <div className="flex flex-col gap-y-[30px] py-[20px] items-center">
@@ -42,44 +46,44 @@ const VideoLiveStreaming = () => {
           <div className="text-xl text-white">12 December 2024</div>
         </div>
         <div className="w-full flex justify-center relative">
-            <div className="absolute z-0 bottom-[25px] right-[40px]">
-                <Icons string="video" />
+          <div className="absolute z-0 bottom-[25px] right-[40px]">
+            <Icons string="video" />
+          </div>
+          <div className="bg-[#F8F8F8] w-[85%] py-[20px] px-[30px] flex justify-between rounded-[10px] z-10">
+            <div className="flex gap-x-[10px] items-center">
+              <div className="text-[#565972]">Select Month: </div>
+              <div className="pr-[10px]">
+                <Select
+                  className="w-[136px] border border-[#565972] rounded-md"
+                  value={selectedOption}
+                  onChange={handleChange}
+                  options={options}
+                  placeholder="Month"
+                />
+              </div>
+              <div className="h-full w-[1px] bg-[#565972]"></div>
+              <div className="text-[#565972]">Select Year: </div>
+              <div className="pr-[10px]">
+                <Select
+                  className="w-[136px] border border-[#565972] rounded-md"
+                  value={selectedOption}
+                  onChange={handleChange}
+                  options={options}
+                  placeholder="Year"
+                />
+              </div>
             </div>
-            <div className="bg-[#F8F8F8] w-[85%] py-[20px] px-[30px] flex justify-between rounded-[10px] z-10">
-                <div className="flex gap-x-[10px] items-center">
-                    <div className="text-[#565972]">Select Month: </div>
-                    <div className="pr-[10px]">
-                    <Select
-                        className="w-[136px] border border-[#565972] rounded-md"
-                        value={selectedOption}
-                        onChange={handleChange}
-                        options={options}
-                        placeholder="Month"
-                    />
-                    </div>
-                    <div className="h-full w-[1px] bg-[#565972]"></div>
-                    <div className="text-[#565972]">Select Year: </div>
-                    <div className="pr-[10px]">
-                    <Select
-                        className="w-[136px] border border-[#565972] rounded-md"
-                        value={selectedOption}
-                        onChange={handleChange}
-                        options={options}
-                        placeholder="Year"
-                    />
-                    </div>
-                </div>
-                <div className="flex items-center gap-x-[25px]">
-                    <input
-                    type="text"
-                    placeholder="Enter City"
-                    className="w-[207px] h-full px-[5px] border border-[#565972] rounded-md"
-                    />
-                    <button className="text-white px-[15px] h-full py-[5px] bg-[#DB6D8F] text-poppins rounded-md">
-                    Find
-                    </button>
-                </div>
+            <div className="flex items-center gap-x-[25px]">
+              <input
+                type="text"
+                placeholder="Enter City"
+                className="w-[207px] h-full px-[5px] border border-[#565972] rounded-md"
+              />
+              <button className="text-white px-[15px] h-full py-[5px] bg-[#DB6D8F] text-poppins rounded-md">
+                Find
+              </button>
             </div>
+          </div>
         </div>
         <div className="w-[85%] flex flex-col gap-y-[36px] border-b border-[#ECECEC] py-[40px] relative">
           <div className="absolute top-[43%] -left-[32px] z-0">

@@ -45,3 +45,68 @@
 .gallery-image:hover .play-button{
   display: flex;
 }
+
+@media screen and (max-width: 991px) {
+  .menu-toggle::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    transform: translateY(-8px);
+    transition: 0.5s;
+  }
+  .menu-toggle::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    transform: translateY(8px);
+    transition: 0.5s;
+    box-shadow: 0 -8px 0 #333;
+  }
+  .menu-toggle.menu-open::before {
+    transform: translateY(0px) rotate(45deg);
+  }
+  .menu-toggle.menu-open::after {
+    transform: translateY(0px) rotate(-45deg);
+    box-shadow: 0 0 #33333300;
+  }
+  .mob-nav::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    top: 24px;
+    background-color: #333;
+    transform: translateY(-8px);
+    transition: 0.5s;
+  }
+  .mob-nav::after {
+    content: "";
+    position: absolute;
+    top:24px;
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    transform: translateY(8px);
+    transition: 0.5s;
+    box-shadow: 0 -8px 0 #333;
+  }
+  .mob-nav.menu-open::before {
+    transform: translateY(0px) rotate(45deg);
+  }
+  .mob-nav.menu-open::after {
+    transform: translateY(0px) rotate(-45deg);
+    box-shadow: 0 0 #33333300;
+  }
+  .menu-list.menu-close {
+    transform: translateX(-250px);
+    transition: 0.5s;
+  }
+  .menu-list.menu-open {
+    transform: translateX(0);
+    transition: 0.5s;
+  }
+}

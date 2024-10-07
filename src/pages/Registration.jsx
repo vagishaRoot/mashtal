@@ -9,6 +9,11 @@ const Registration = () => {
     setNavigate("Register");
   }, []);
 
+  useEffect(() => {
+    let secondDiv = document.getElementById("topHeader");
+    secondDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
+
   return (
     <div className="register_bg flex justify-end py-[120px] px-[150px]">
       <div className="w-[620px] flex flex-col gap-y-[20px] p-[20px] bg-[#F9FBFF] rounded-[20px]">

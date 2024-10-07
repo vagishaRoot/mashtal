@@ -14,7 +14,9 @@ const AboutUs = () => {
     const [navigate, setNavigate] = useRecoilState(navigateState);
 
     useEffect(()=>{
-      setNavigate("About Us")
+      setNavigate("About Us");
+      let secondDiv = document.getElementById("topHeader")
+      secondDiv.scrollIntoView({ behavior: "smooth", block: "start" })
     },[])
   return (
     <div className="flex flex-col items-center w-full gap-y-[70px]">
@@ -43,11 +45,11 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="w-full flex justify-center">
-        <div className="w-[85%] flex items-center justify-between max-1440:w-[95%]">
+        <div className="w-[85%] flex items-center justify-between max-1440:w-[95%] max-991:flex-col max-991:gap-y-[25px]">
           <div className="">
             <img src={empowering} />
           </div>
-          <div className="w-[42%] flex flex-col items-start">
+          <div className="w-[42%] max-991:w-[90%] max-991:items-center  flex flex-col items-start">
             <div className="text-[#DB6D8F] text-xl font-italic">Fostering Mumenaat Success</div>
             <div className="text-2xl font-black uppercase">Empowering Mumenaat</div>
             <div className="mt-[30px] text-lg text-[#616161]">An initiative by Daerat-ul-Talebaat-ul- Mumenaat Mashtal in Arabic means nursery .Nursery with blooming plants The noble idea of uplifting women entrepreneurs was conceived with the raza and dua mubarak of Shz.Husainah baisaab(D.M). Who envisioned of providing a platform for business and exposure to all the blooming as well as established mumenaat entrepreneurs.</div>
@@ -60,8 +62,8 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="w-full flex justify-center">
-        <div className="w-[85%] flex items-center justify-between max-1440:w-[95%]">
-          <div className="w-[42%] flex flex-col items-start">
+        <div className="w-[85%] flex items-center justify-between max-1440:w-[95%] max-991:flex-col-reverse max-991:gap-y-[25px]">
+          <div className="w-[42%] max-991:w-[90%] max-991:items-center  flex flex-col items-start">
             <div className="text-[#DB6D8F] text-xl font-italic">Empowering Mumenaat</div>
             <div className="text-2xl font-black uppercase">Nurturing Ventures</div>
             <div className="mt-[30px] text-lg text-[#616161]">The Expo was planned with this very intention as to provide an opportunity to develop small-scale/ household businesses of mumenaat where they use their ‘Hunar’ (skills) to support their families and a way to achieve excellence in their respective fields. With the goal of being a non-profitable project and the ultimate intention to use the finance profited for the development of such industries. Since its commencement in 2018, Mashtal has successfully extended financial support to many rising ventures.</div>

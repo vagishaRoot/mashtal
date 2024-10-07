@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import rect1 from "../assets/rect1.png";
 import rect2 from "../assets/rect2.png";
 import rect3 from "../assets/rect3.jpg";
@@ -157,14 +157,21 @@ const StoreList = () => {
   const [modalIndex, setModalIndex] = useState(null);
 
   console.log("modalIndex:- ", modalIndex);
+
+  useEffect(() => {
+    let secondDiv = document.getElementById("topHeader");
+    secondDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
   return (
     <div className="w-full flex flex-col py-[50px] gap-y-[50px] items-center relative">
       {modalIndex !== null ? (
         <div className="absolute top-0 w-full h-full left-0 bg-[#00000025] flex justify-center items-start z-10 pt-[20px]">
           <div className="bg-white w-[500px] flex flex-col items-start p-[20px] gap-y-[20px] rounded-[20px]">
             <div className="flex justify-between w-full">
-                <div className="">Stall Details</div>
-                <span onClick={()=>setModalIndex(null)}><Icons string="close" /></span>
+              <div className="">Stall Details</div>
+              <span onClick={() => setModalIndex(null)}>
+                <Icons string="close" />
+              </span>
             </div>
             <div className="flex flex-col gap-y-[5px]">
               <div className="w-full">
@@ -177,30 +184,38 @@ const StoreList = () => {
               </div>
             </div>
             <div className="flex justify-between items-end w-full">
-                <div className="flex flex-col gap-y-[5px]">
-                    <div className="text-xl font-[700]">
-                        {JSON[modalIndex].Shop}(Since:1998)
-                    </div>
-                    <div className="text-xl font-[700] text-[#565972]">
-                        {JSON[modalIndex].Owner}
-                    </div>
-                    <div className="flex gap-x-[15px] mt-[20px]">
-                        <Icons string="call" />
-                        <div className="text-[#565972] text-sm">(+91) 98798-15874</div>
-                    </div>
-                    <div className="flex gap-x-[15px]">
-                        <Icons string="email" />
-                        <div className="text-[#565972] text-sm">{JSON[modalIndex].Email}</div>
-                    </div>
+              <div className="flex flex-col gap-y-[5px]">
+                <div className="text-xl font-[700]">
+                  {JSON[modalIndex].Shop}(Since:1998)
                 </div>
-                <div className="text-7xl font-[900] text-outfit text-[#EAEAEA]">No: {JSON[modalIndex].key}</div>
+                <div className="text-xl font-[700] text-[#565972]">
+                  {JSON[modalIndex].Owner}
+                </div>
+                <div className="flex gap-x-[15px] mt-[20px]">
+                  <Icons string="call" />
+                  <div className="text-[#565972] text-sm">
+                    (+91) 98798-15874
+                  </div>
+                </div>
+                <div className="flex gap-x-[15px]">
+                  <Icons string="email" />
+                  <div className="text-[#565972] text-sm">
+                    {JSON[modalIndex].Email}
+                  </div>
+                </div>
+              </div>
+              <div className="text-7xl font-[900] text-outfit text-[#EAEAEA]">
+                No: {JSON[modalIndex].key}
+              </div>
             </div>
             <div className="flex justify-between w-full mt-[10px]">
-                <div className="flex gap-x-[5px]">
-                    <StarRating rating={JSON[modalIndex].Rating} color="black"/>
-                    <div className="font-[700]">{JSON[modalIndex].Rating}/5</div>
-                </div>
-                <div className="text-[#565972] font-[900] text-outfit">{JSON[modalIndex].Category}</div>
+              <div className="flex gap-x-[5px]">
+                <StarRating rating={JSON[modalIndex].Rating} color="black" />
+                <div className="font-[700]">{JSON[modalIndex].Rating}/5</div>
+              </div>
+              <div className="text-[#565972] font-[900] text-outfit">
+                {JSON[modalIndex].Category}
+              </div>
             </div>
           </div>
         </div>
@@ -242,7 +257,11 @@ const StoreList = () => {
       <div className="w-[85%] grid grid-cols-4 gap-[40px]">
         {JSON &&
           JSON.map((v, i) => (
-            <div className="relative w-full" key={i} onClick={()=>setModalIndex(i)}>
+            <div
+              className="relative w-full"
+              key={i}
+              onClick={() => setModalIndex(i)}
+            >
               <img src={v.image} className="h-full object-cover" />
               <div className="w-full h-full absolute bg-gradient-to-r from-[#000000ea] flex flex-col justify-between top-0 left-0 p-[20px]">
                 <div className="text-4xl font-[900] text-outfit text-white">

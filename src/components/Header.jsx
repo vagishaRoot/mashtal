@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from "../assets/logo.png";
 import Icons from './Icons';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { navigateState } from '../state/AppAtom';
 
@@ -34,13 +34,16 @@ const Header = () => {
             link: '/contact'
         }
     ]
+
+    const [menuOpen, setMenuOpen] = useState(false)
   return (
     <>
         <div className="w-full flex justify-center items-center pb-2" id="topHeader">
             <div className="w-[85%] flex justify-between items-center max-1440:w-[95%]">
                 <div className="flex gap-x-[70px] items-center">
+                <div className={`min-991:hidden menu-toggle relative px-5 py-4 ${menuOpen? 'menu-open' : ''}`} onClick={()=>setMenuOpen(!menuOpen)}></div>
                     <img src={logo} className="h-[70px]" />
-                    <div className="flex gap-x-2">
+                    <div className={`flex gap-x-2 max-991:hidden`}>
                         {navigateList.map((v,i)=>
                             <Link key={i} to={v.link} className={`py-2 px-3 text-poppins ${navigate === v.label ? 'text-[#DB6D8F]' : 'text-gray-500'}`}>{v.label}</Link>
                         )}

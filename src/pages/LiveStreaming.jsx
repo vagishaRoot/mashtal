@@ -21,9 +21,13 @@ const LiveStreaming = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [navigate, setNavigate] = useRecoilState(navigateState);
 
-  useEffect(()=>{
-    setNavigate("Live Streaming")
-  },[])
+  useEffect(() => {
+    setNavigate("Live Streaming");
+  }, []);
+  useEffect(() => {
+    let secondDiv = document.getElementById("topHeader");
+    secondDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
   const handleChange = () => {};
   return (
     <div className="flex flex-col w-full items-center">
@@ -37,9 +41,9 @@ const LiveStreaming = () => {
       </div>
       <div className="w-full flex justify-center py-2">
         <div className="flex w-[85%] gap-x-8 py-[70px] border-b border-gray-200 relative">
-            <div className="absolute z-0 bottom-[15px] -right-[70px]">
-                <Icons string="video" />
-            </div>
+          <div className="absolute z-0 bottom-[15px] -right-[70px]">
+            <Icons string="video" />
+          </div>
           <div className="w-1/2 relative z-10">
             <img src={mumbai} className="w-full" />
             <div className="absolute flex flex-col p-6 items-start gap-y-[5px] top-0">
@@ -84,7 +88,9 @@ const LiveStreaming = () => {
             <div className="text-[#DB6D8F] text-xl font-italic">
               Past Exhibition
             </div>
-            <div className="text-2xl font-[800] uppercase text-outfit">Video Streaming</div>
+            <div className="text-2xl font-[800] uppercase text-outfit">
+              Video Streaming
+            </div>
           </div>
           <div className="bg-[#F8F8F8] w-full py-[20px] px-[30px] flex justify-between rounded-[10px]">
             <div className="flex gap-x-[10px] items-center">
@@ -111,70 +117,96 @@ const LiveStreaming = () => {
               </div>
             </div>
             <div className="flex items-center gap-x-[25px]">
-                <input type="text" placeholder="Enter City" className="w-[207px] h-full px-[5px] border border-[#565972] rounded-md"/>
-                <button className='text-white px-[15px] h-full py-[5px] bg-[#DB6D8F] text-poppins rounded-md'>Find</button>
+              <input
+                type="text"
+                placeholder="Enter City"
+                className="w-[207px] h-full px-[5px] border border-[#565972] rounded-md"
+              />
+              <button className="text-white px-[15px] h-full py-[5px] bg-[#DB6D8F] text-poppins rounded-md">
+                Find
+              </button>
             </div>
           </div>
         </div>
       </div>
       <div className="w-[85%] flex flex-col gap-y-[36px] border-b border-[#ECECEC] py-[40px] relative">
         <div className="absolute top-[31px] -left-[32px] z-0">
-            <Icons string="photo-film-svg" />
+          <Icons string="photo-film-svg" />
         </div>
         <div className="flex gap-x-[10px] items-center z-10">
-            <div className="text-xl">2023</div>
-            <div className="h-[2px] w-[100px] bg-[#DB6D8F]"></div>
+          <div className="text-xl">2023</div>
+          <div className="h-[2px] w-[100px] bg-[#DB6D8F]"></div>
         </div>
         <div className="grid grid-cols-3 gap-x-[30px] z-10">
-            <div className="relative">
-                <img src={jaipur2} alt=""  className="w-full"/>
-                <div className="absolute flex flex-col p-6 items-start gap-y-[5px] top-0">
-                    <div className="text-4xl font-[900] text-white text-outfit">Jaipur</div>
-                    <div className="text-2xl text-white text-poppins text-outfit">1 November 2023</div>
-                </div>
+          <div className="relative">
+            <img src={jaipur2} alt="" className="w-full" />
+            <div className="absolute flex flex-col p-6 items-start gap-y-[5px] top-0">
+              <div className="text-4xl font-[900] text-white text-outfit">
+                Jaipur
+              </div>
+              <div className="text-2xl text-white text-poppins text-outfit">
+                1 November 2023
+              </div>
             </div>
-            <div className="relative">
-                <img src={delhi} alt=""  className="w-full"/>
-                <div className="absolute flex flex-col p-6 items-start gap-y-[5px] top-0">
-                    <div className="text-4xl font-[900] text-white text-outfit">Delhi</div>
-                    <div className="text-2xl text-white text-poppins text-outfit">12 September 2023</div>
-                </div>
+          </div>
+          <div className="relative">
+            <img src={delhi} alt="" className="w-full" />
+            <div className="absolute flex flex-col p-6 items-start gap-y-[5px] top-0">
+              <div className="text-4xl font-[900] text-white text-outfit">
+                Delhi
+              </div>
+              <div className="text-2xl text-white text-poppins text-outfit">
+                12 September 2023
+              </div>
             </div>
-            <div className="relative">
-                <img src={kochi} alt=""  className="w-full"/>
-                <div className="absolute flex flex-col p-6 items-start gap-y-[5px] top-0">
-                    <div className="text-4xl font-[900] text-white text-outfit">Kochi</div>
-                    <div className="text-2xl text-white text-poppins text-outfit">25 March 2023</div>
-                </div>
+          </div>
+          <div className="relative">
+            <img src={kochi} alt="" className="w-full" />
+            <div className="absolute flex flex-col p-6 items-start gap-y-[5px] top-0">
+              <div className="text-4xl font-[900] text-white text-outfit">
+                Kochi
+              </div>
+              <div className="text-2xl text-white text-poppins text-outfit">
+                25 March 2023
+              </div>
             </div>
+          </div>
         </div>
         <div className="flex justify-center w-full">
-            <div className="text-[#7D87D7]">View More</div>
+          <div className="text-[#7D87D7]">View More</div>
         </div>
       </div>
       <div className="w-[85%] flex flex-col gap-y-[36px] py-[40px] relative">
         <div className="absolute top-[31px] -left-[32px] z-0">
-            <Icons string="photo-film-svg" />
+          <Icons string="photo-film-svg" />
         </div>
         <div className="flex gap-x-[10px] items-center z-10">
-            <div className="text-xl">2022</div>
-            <div className="h-[2px] w-[100px] bg-[#DB6D8F]"></div>
+          <div className="text-xl">2022</div>
+          <div className="h-[2px] w-[100px] bg-[#DB6D8F]"></div>
         </div>
         <div className="grid grid-cols-3 gap-x-[30px] z-10">
-            <div className="relative">
-                <img src={kolkata} alt="" className="w-full"/>
-                <div className="absolute flex flex-col p-6 items-start gap-y-[5px] top-0">
-                    <div className="text-4xl font-[900] text-white text-outfit">Kolkata</div>
-                    <div className="text-2xl text-white text-poppins text-outfit">19 December 2022</div>
-                </div>
+          <div className="relative">
+            <img src={kolkata} alt="" className="w-full" />
+            <div className="absolute flex flex-col p-6 items-start gap-y-[5px] top-0">
+              <div className="text-4xl font-[900] text-white text-outfit">
+                Kolkata
+              </div>
+              <div className="text-2xl text-white text-poppins text-outfit">
+                19 December 2022
+              </div>
             </div>
-            <div className="relative">
-                <img src={bengaluru} alt="" className="w-full"/>
-                <div className="absolute flex flex-col p-6 items-start gap-y-[5px] top-0">
-                    <div className="text-4xl font-[900] text-white text-outfit">Bengaluru</div>
-                    <div className="text-2xl text-white text-poppins text-outfit">12 October 2022</div>
-                </div>
+          </div>
+          <div className="relative">
+            <img src={bengaluru} alt="" className="w-full" />
+            <div className="absolute flex flex-col p-6 items-start gap-y-[5px] top-0">
+              <div className="text-4xl font-[900] text-white text-outfit">
+                Bengaluru
+              </div>
+              <div className="text-2xl text-white text-poppins text-outfit">
+                12 October 2022
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </div>

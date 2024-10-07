@@ -5,6 +5,11 @@ import { navigateState } from "../state/AppAtom";
 const Contact = () => {
   const [navigate, setNavigate] = useRecoilState(navigateState);
 
+  useEffect(()=>{
+        let secondDiv = document.getElementById("topHeader")
+        secondDiv.scrollIntoView({ behavior: "smooth", block: "start" })
+    },[])
+
   useEffect(() => {
     setNavigate("Contact");
   }, []);

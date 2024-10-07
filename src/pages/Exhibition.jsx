@@ -5,8 +5,8 @@ import photo1 from "../assets/photo_1.png";
 import photo2 from "../assets/photo_2.png";
 import mumbai from "../assets/mumbai.png";
 import Header from "../components/Header";
-import store from "../assets/store.png"
-import teamwork from "../assets/teamwork.png"
+import store from "../assets/store.png";
+import teamwork from "../assets/teamwork.png";
 
 const Exhibition = () => {
   const [navigate, setNavigate] = useRecoilState(navigateState);
@@ -14,10 +14,13 @@ const Exhibition = () => {
   useEffect(() => {
     setNavigate("Exhibition");
   }, []);
+  useEffect(() => {
+    let secondDiv = document.getElementById("topHeader");
+    secondDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
   return (
     <>
       <div className="flex w-full flex-col items-center gap-y-3 relative">
-        
         <div className="flex w-full justify-center">
           <div className="w-[80%] flex items-center justify-center">
             <div className="flex flex-col gap-y-[15px] w-1/2">
@@ -76,93 +79,115 @@ const Exhibition = () => {
           </div>
         </div>
         <div className="absolute w-full h-full top-0 left-0 bg-[#00000033] flex items-center justify-center">
-            <div className="p-[15px] bg-[#F9FBFF] rounded-[10px] flex justify-between w-[900px]">
-                <div className="w-[450px] flex flex-col">
-                    <div className="w-full flex">
-                        <div className="w-full text-[#DB6D8F] text-outfit">Date</div>
-                        <div className="w-full text-[#DB6D8F] text-outfit">City</div>
-                    </div>
-                    <div className="w-full flex mt-[10px]">
-                        <div className="w-full text-xs text-outfit font-[700] text-[#565972]">2024</div>
-                    </div>
-                    <div className="w-full flex pt-[2px] border-b border-[#ECECEC]">
-                        <div className="w-full text-outfit text-sm flex gap-x-[10px] items-center">12 December 2024 <div className="h-[8px] w-[8px] bg-white border border-[#DB6D8F] rounded-full"></div></div>
-                        <div className="w-full text-outfit text-sm">Mumbai, Pune</div>
-                    </div>
-
-                    <div className="w-full flex mt-[20px]">
-                        <div className="w-full text-xs text-outfit font-[700] text-[#565972]">2023</div>
-                    </div>
-                    <div className="w-full flex pt-[2px] pb-[2px] border-b border-[#ECECEC]">
-                        <div className="w-full text-outfit text-sm">01 November 2023</div>
-                        <div className="w-full text-outfit text-sm">Jaipur</div>
-                    </div>
-                    <div className="w-full flex pt-[4px] pb-[2px] border-b border-[#ECECEC]">
-                        <div className="w-full text-outfit text-sm">12 September 2023</div>
-                        <div className="w-full text-outfit text-sm">Delhi</div>
-                    </div>
-                    <div className="w-full flex pt-[4px] pb-[2px] border-b border-[#ECECEC]">
-                        <div className="w-full text-outfit text-sm">25 March 2023</div>
-                        <div className="w-full text-outfit text-sm">Kochi, Surat, Delhi</div>
-                    </div>
-
-                    <div className="w-full flex mt-[20px]">
-                        <div className="w-full text-xs text-outfit font-[700] text-[#565972]">2022</div>
-                    </div>
-                    <div className="w-full flex pt-[2px] pb-[2px] border-b border-[#ECECEC]">
-                        <div className="w-full text-outfit text-sm">01 February 2022</div>
-                        <div className="w-full text-outfit text-sm">Kochi</div>
-                    </div>
-                    <div className="w-full flex pt-[4px] pb-[2px] border-b border-[#ECECEC]">
-                        <div className="w-full text-outfit text-sm">12 March 2022 </div>
-                        <div className="w-full text-outfit text-sm">Nasik</div>
-                    </div>
-                    <div className="w-full flex pt-[4px] pb-[2px] border-b border-[#ECECEC]">
-                        <div className="w-full text-outfit text-sm">25 March 2022</div>
-                        <div className="w-full text-outfit text-sm">Kolkata</div>
-                    </div>
-                    <div className="w-full flex justify-center text-[#565972] mt-[20px] text-outfit text-sm">Click to More</div>
+          <div className="p-[15px] bg-[#F9FBFF] rounded-[10px] flex justify-between w-[900px]">
+            <div className="w-[450px] flex flex-col">
+              <div className="w-full flex">
+                <div className="w-full text-[#DB6D8F] text-outfit">Date</div>
+                <div className="w-full text-[#DB6D8F] text-outfit">City</div>
+              </div>
+              <div className="w-full flex mt-[10px]">
+                <div className="w-full text-xs text-outfit font-[700] text-[#565972]">
+                  2024
                 </div>
-                <div className="h-[343px] w-[1px] bg-[#F1F1F1]"></div>
-                <div className="w-[350px] flex flex-col gap-y-[20px]">
-                    <div className="w-full text-[#DB6D8F] text-outfit">Other</div>
-                    <div className="flex items-center gap-x-[15px] w-full">
-                        <img src={store} alt="" />
-                        <div className="flex flex-col">
-                            <div className="text-outfit text-sm text-[#DB6D8F]">685+</div>
-                            <div className="text-outfit text-sm">Total Exhibition</div>
-                        </div>
-                    </div>
-                    <div className="flex items-center gap-x-[15px] w-full">
-                        <img src={teamwork} alt="" />
-                        <div className="flex flex-col">
-                            <div className="text-outfit text-sm text-[#DB6D8F]">8400+</div>
-                            <div className="text-outfit text-sm">Participate Members</div>
-                        </div>
-                    </div>
-                    <div className="font-semibold text-outfit">New Update</div>
-                    <div className="w-full h-[140px] border border-black overflow-y-auto p-[10px]">
-                        <div className="text-[#001077] pb-[2px] border-b border-[#E2E2E2] text-sm">
-                            Lorem ipsum dolor sit amet
-                            <span className="text-gradient font-[700] px-[4px]">New</span>
-                        </div>
-                        <div className="text-[#001077] pb-[2px] pt-[3px] border-b border-[#E2E2E2] text-sm">
-                            Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            <span className="text-gradient font-[700] px-[4px]">New</span>
-                        </div>
-                        <div className="text-[#001077] pb-[2px] pt-[3px] border-b border-[#E2E2E2] text-sm">
-                            Consectetur adipiscing elit, sed do 
-                            <span className="text-gradient font-[700] px-[4px]">New</span>
-                        </div>
-                        <div className="text-[#001077] pb-[2px] pt-[3px] border-b border-[#E2E2E2] text-sm">
-                            Elit consectetur adipiscing
-                        </div>
-                        <div className="text-[#001077] pb-[2px] pt-[3px] border-b border-[#E2E2E2] text-sm">
-                            Elit consectetur adipiscing
-                        </div>
-                    </div>
+              </div>
+              <div className="w-full flex pt-[2px] border-b border-[#ECECEC]">
+                <div className="w-full text-outfit text-sm flex gap-x-[10px] items-center">
+                  12 December 2024{" "}
+                  <div className="h-[8px] w-[8px] bg-white border border-[#DB6D8F] rounded-full"></div>
                 </div>
+                <div className="w-full text-outfit text-sm">Mumbai, Pune</div>
+              </div>
+
+              <div className="w-full flex mt-[20px]">
+                <div className="w-full text-xs text-outfit font-[700] text-[#565972]">
+                  2023
+                </div>
+              </div>
+              <div className="w-full flex pt-[2px] pb-[2px] border-b border-[#ECECEC]">
+                <div className="w-full text-outfit text-sm">
+                  01 November 2023
+                </div>
+                <div className="w-full text-outfit text-sm">Jaipur</div>
+              </div>
+              <div className="w-full flex pt-[4px] pb-[2px] border-b border-[#ECECEC]">
+                <div className="w-full text-outfit text-sm">
+                  12 September 2023
+                </div>
+                <div className="w-full text-outfit text-sm">Delhi</div>
+              </div>
+              <div className="w-full flex pt-[4px] pb-[2px] border-b border-[#ECECEC]">
+                <div className="w-full text-outfit text-sm">25 March 2023</div>
+                <div className="w-full text-outfit text-sm">
+                  Kochi, Surat, Delhi
+                </div>
+              </div>
+
+              <div className="w-full flex mt-[20px]">
+                <div className="w-full text-xs text-outfit font-[700] text-[#565972]">
+                  2022
+                </div>
+              </div>
+              <div className="w-full flex pt-[2px] pb-[2px] border-b border-[#ECECEC]">
+                <div className="w-full text-outfit text-sm">
+                  01 February 2022
+                </div>
+                <div className="w-full text-outfit text-sm">Kochi</div>
+              </div>
+              <div className="w-full flex pt-[4px] pb-[2px] border-b border-[#ECECEC]">
+                <div className="w-full text-outfit text-sm">12 March 2022 </div>
+                <div className="w-full text-outfit text-sm">Nasik</div>
+              </div>
+              <div className="w-full flex pt-[4px] pb-[2px] border-b border-[#ECECEC]">
+                <div className="w-full text-outfit text-sm">25 March 2022</div>
+                <div className="w-full text-outfit text-sm">Kolkata</div>
+              </div>
+              <div className="w-full flex justify-center text-[#565972] mt-[20px] text-outfit text-sm">
+                Click to More
+              </div>
             </div>
+            <div className="h-[343px] w-[1px] bg-[#F1F1F1]"></div>
+            <div className="w-[350px] flex flex-col gap-y-[20px]">
+              <div className="w-full text-[#DB6D8F] text-outfit">Other</div>
+              <div className="flex items-center gap-x-[15px] w-full">
+                <img src={store} alt="" />
+                <div className="flex flex-col">
+                  <div className="text-outfit text-sm text-[#DB6D8F]">685+</div>
+                  <div className="text-outfit text-sm">Total Exhibition</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-x-[15px] w-full">
+                <img src={teamwork} alt="" />
+                <div className="flex flex-col">
+                  <div className="text-outfit text-sm text-[#DB6D8F]">
+                    8400+
+                  </div>
+                  <div className="text-outfit text-sm">Participate Members</div>
+                </div>
+              </div>
+              <div className="font-semibold text-outfit">New Update</div>
+              <div className="w-full h-[140px] border border-black overflow-y-auto p-[10px]">
+                <div className="text-[#001077] pb-[2px] border-b border-[#E2E2E2] text-sm">
+                  Lorem ipsum dolor sit amet
+                  <span className="text-gradient font-[700] px-[4px]">New</span>
+                </div>
+                <div className="text-[#001077] pb-[2px] pt-[3px] border-b border-[#E2E2E2] text-sm">
+                  Consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  ut labore
+                  <span className="text-gradient font-[700] px-[4px]">New</span>
+                </div>
+                <div className="text-[#001077] pb-[2px] pt-[3px] border-b border-[#E2E2E2] text-sm">
+                  Consectetur adipiscing elit, sed do
+                  <span className="text-gradient font-[700] px-[4px]">New</span>
+                </div>
+                <div className="text-[#001077] pb-[2px] pt-[3px] border-b border-[#E2E2E2] text-sm">
+                  Elit consectetur adipiscing
+                </div>
+                <div className="text-[#001077] pb-[2px] pt-[3px] border-b border-[#E2E2E2] text-sm">
+                  Elit consectetur adipiscing
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

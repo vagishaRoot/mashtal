@@ -38,10 +38,15 @@ const StallBooking = () => {
   }
 
   const modalOpen = () => {
-    let secondDiv = document.getElementById("topHeader")
-    secondDiv.scrollIntoView({ behavior: "smooth", block: "start" })
-    setOpenModal(true)
-  }
+    let secondDiv = document.getElementById("topHeader");
+    secondDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+    setOpenModal(true);
+  };
+
+  useEffect(() => {
+    let secondDiv = document.getElementById("topHeader");
+    secondDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
 
   return (
     <div className="flex flex-col gap-y-[80px] py-[20px] items-center relative">

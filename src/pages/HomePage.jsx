@@ -21,6 +21,10 @@ const HomePage = () => {
 
     useEffect(()=>{
         setNavigate("Home")
+    },[]);
+    useEffect(()=>{
+        let secondDiv = document.getElementById("topHeader")
+        secondDiv.scrollIntoView({ behavior: "smooth", block: "start" })
     },[])
   return (
     <div className="flex w-full flex-col items-center gap-y-3">
