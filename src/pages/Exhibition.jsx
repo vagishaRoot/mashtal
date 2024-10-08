@@ -7,6 +7,7 @@ import mumbai from "../assets/mumbai.png";
 import Header from "../components/Header";
 import store from "../assets/store.png";
 import teamwork from "../assets/teamwork.png";
+import { Link } from "react-router-dom";
 
 const Exhibition = () => {
   const [navigate, setNavigate] = useRecoilState(navigateState);
@@ -90,13 +91,13 @@ const Exhibition = () => {
                   2024
                 </div>
               </div>
-              <div className="w-full flex pt-[2px] border-b border-[#ECECEC]">
-                <div className="w-full text-outfit text-sm flex gap-x-[10px] items-center">
+              <Link className="w-full flex pt-[2px] border-b border-[#ECECEC]" to="/store_list">
+                <div className="w-full text-outfit text-sm flex gap-x-[10px] items-center text-black hover:text-black">
                   12 December 2024{" "}
                   <div className="h-[8px] w-[8px] bg-white border border-[#DB6D8F] rounded-full"></div>
                 </div>
-                <div className="w-full text-outfit text-sm">Mumbai, Pune</div>
-              </div>
+                <div className="w-full text-outfit text-sm text-black hover:text-black">Mumbai, Pune</div>
+              </Link>
 
               <div className="w-full flex mt-[20px]">
                 <div className="w-full text-xs text-outfit font-[700] text-[#565972]">

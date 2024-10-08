@@ -5,4 +5,9 @@ const navigateState = atom({
   default: "",
 });
 
-export {navigateState}
+const loginState = atom({
+  key: "loginState",
+  default: {},
+});
+
+export {navigateState, loginState}

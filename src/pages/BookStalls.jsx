@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import mumbai from "../assets/mumbai.png";
 import bookStalls from "../assets/bookStalls.png";
 import stall_1 from "../assets/stall_1.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import address from "../assets/address.png";
 
 const BookStalls = () => {
@@ -54,7 +54,7 @@ const BookStalls = () => {
           Book your stall
         </div>
         <div className="grid grid-cols-4 gap-x-[20px] w-full">
-          <div className="w-full rounded-lg flex" onClick={handleNavigate}>
+          <Link className="w-full rounded-lg flex" to="/stall_booking">
             <div className="w-3/4 bg-[#F1F1F1] p-[20px] flex flex-col items-start gap-y-[2px] rounded-l-[20px]">
               <img src={stall_1} alt="" />
               <div className="flex gap-x-[7px] items-center mt-[20px]">
@@ -120,8 +120,8 @@ const BookStalls = () => {
               </div>
               <img src={bookStalls} alt="" className="h-full" />
             </div>
-          </div>
-          <div className="w-full rounded-lg flex">
+          </Link>
+          <Link className="w-full rounded-lg flex" to="/stall_booking">
             <div className="w-3/4 bg-[#F1F1F1] p-[20px] flex flex-col items-start gap-y-[2px] rounded-l-[20px]">
               <img src={stall_1} alt="" />
               <div className="flex gap-x-[7px] items-center mt-[20px]">
@@ -187,8 +187,8 @@ const BookStalls = () => {
               </div>
               <img src={bookStalls} alt="" className="h-full" />
             </div>
-          </div>
-          <div className="w-full rounded-lg flex">
+          </Link>
+          <Link className="w-full rounded-lg flex" to="/stall_booking">
             <div className="w-3/4 bg-[#F1F1F1] p-[20px] flex flex-col items-start gap-y-[2px] rounded-l-[20px]">
               <img src={stall_1} alt="" />
               <div className="flex gap-x-[7px] items-center mt-[20px]">
@@ -254,8 +254,8 @@ const BookStalls = () => {
               </div>
               <img src={bookStalls} alt="" className="h-full" />
             </div>
-          </div>
-          <div className="w-full rounded-lg flex">
+          </Link>
+          <Link className="w-full rounded-lg flex" to="/stall_booking">
             <div className="w-3/4 bg-[#F1F1F1] p-[20px] flex flex-col items-start gap-y-[2px] rounded-l-[20px]">
               <img src={stall_1} alt="" />
               <div className="flex gap-x-[7px] items-center mt-[20px]">
@@ -321,7 +321,7 @@ const BookStalls = () => {
               </div>
               <img src={bookStalls} alt="" className="h-full" />
             </div>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="bg-[#F9FBFF] py-[100px] w-full flex justify-center mt-[40px]">

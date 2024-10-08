@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import stall from "../assets/stall.png";
 import money from "../assets/money.png";
 import { useCallback } from "react";

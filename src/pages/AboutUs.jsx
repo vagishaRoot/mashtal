@@ -9,6 +9,7 @@ import blog1 from "../assets/blog1.png"
 import blog2 from "../assets/blog2.jpg";
 import { useRecoilState } from 'recoil';
 import { navigateState } from '../state/AppAtom';
+import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
     const [navigate, setNavigate] = useRecoilState(navigateState);
@@ -31,7 +32,7 @@ const AboutUs = () => {
                 <div className="absolute flex flex-col p-6 items-start gap-y-[5px] top-0">
                     <div className="text-4xl font-bold text-white">Mumbai</div>
                     <div className="text-3xl text-white text-poppins">12 December 2024</div>
-                    <div className="py-[10px] px-[20px] bg-[#DB6D8F] text-white rounded-full text-lg mt-[10px] tracking-wide text-poppins">Register Now</div>
+                    <Link className="py-[10px] px-[20px] bg-[#DB6D8F] text-white hover:text-white rounded-full text-lg mt-[10px] tracking-wide text-poppins" to="/book_stalls">Register Now</Link>
                 </div>
             </div>
             <div className="w-1/2 flex flex-col justify-between max-991:w-full max-991:mt-[20px]">

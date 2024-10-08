@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import logo from "../assets/logo.png";
 import Icons from './Icons';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
-import { navigateState } from '../state/AppAtom';
+import { loginState, navigateState } from '../state/AppAtom';
 
 const Header = () => {
     const [navigate, setNavigate] = useRecoilState(navigateState);
@@ -35,7 +35,15 @@ const Header = () => {
         }
     ]
 
-    const [menuOpen, setMenuOpen] = useState(false)
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [input, setInput] = useRecoilState(loginState);
+    const navigation = useNavigate()
+
+    const logout = () => {
+        localStorage.removeItem('login')
+        setInput({})
+        navigation("/login")
+    }
   return (
     <>
         <div className="w-full flex justify-center items-center pb-2" id="topHeader">
@@ -50,8 +58,9 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="flex gap-x-[25px] items-center">
+                    {Object.keys(input).length ? <button className="flex bg-transparent gap-x-[10px] items-center font-[700]"><Icons string={"user"} />User Name</button> : <></>}
                     <Icons string="search" />
-                    <Link className='text-white hover:text-white px-[15px] py-[5px] bg-[#DB6D8F] text-poppins rounded-[10px]' to="/register">Registrar</Link>
+                    {Object.keys(input).length ? <button className="flex bg-[#7D87D7] h-[43px] w-[74px] justify-center text-white" onClick={logout}>Logout</button> : <Link className='text-white hover:text-white px-[15px] h-[40px] flex justify-center items-center bg-[#DB6D8F] text-poppins rounded-[10px] text-sm' to="/login">Register & Login</Link>}
                 </div>
             </div>
         </div>

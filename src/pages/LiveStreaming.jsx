@@ -10,6 +10,7 @@ import kolkata from "../assets/kolkata.png";
 import Icons from "../components/Icons";
 import { useRecoilState } from "recoil";
 import { navigateState } from "../state/AppAtom";
+import { Link } from "react-router-dom";
 
 const options = [
   { value: "January", label: "January" },
@@ -44,7 +45,7 @@ const LiveStreaming = () => {
           <div className="absolute z-0 bottom-[15px] -right-[70px]">
             <Icons string="video" />
           </div>
-          <div className="w-1/2 relative z-10">
+          <Link className="w-1/2 relative z-10" to="/video_live_streaming">
             <img src={mumbai} className="w-full" />
             <div className="absolute flex flex-col p-6 items-start gap-y-[5px] top-0">
               <div className="text-4xl font-bold text-white">Mumbai</div>
@@ -61,8 +62,8 @@ const LiveStreaming = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="w-1/2 relative z-10">
+          </Link>
+          <Link className="w-1/2 relative z-10" to="/video_live_streaming">
             <img src={pune} className="w-full" />
             <div className="absolute flex flex-col p-6 items-start gap-y-[5px] top-0">
               <div className="text-4xl font-bold text-white">Puna</div>
@@ -79,7 +80,7 @@ const LiveStreaming = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="w-full flex justify-center py-2">

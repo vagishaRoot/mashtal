@@ -14,6 +14,7 @@ import StallBooking from '../pages/StallBooking'
 import StoreList from '../pages/StoreList'
 import BookStalls from '../pages/BookStalls'
 import Profile from '../pages/Profile'
+import Login from '../pages/Login'
 
 const Routers = () => {
   return (
@@ -25,6 +26,7 @@ const Routers = () => {
         <Route path="/video_live_streaming" exact element={<><Header /><VideoLiveStreaming /><Footer /></>} />
         <Route path="/contact" exact element={<><Header /><Contact /><Footer /></>} />
         <Route path="/register" exact element={<><Header /><Registration /></>} />
+        <Route path="/login" exact element={<><Header /><Login /></>} />
         <Route path="/stall_booking" exact element={<><Header /><StallBooking /><Footer /></>} />
         <Route path="/store_list" exact element={<><Header /><StoreList /><Footer /></>} />
         <Route path="/book_stalls" exact element={<><Header /><BookStalls /><Footer /></>} />
