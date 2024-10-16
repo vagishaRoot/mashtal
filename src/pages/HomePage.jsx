@@ -31,18 +31,17 @@ const HomePage = () => {
     <div className="flex w-full flex-col items-center gap-y-3">
       {/* <Header /> */}
       <div className="flex w-full justify-center">
-        <div className="w-[80%] flex items-center justify-center max-1440:w-[95%] max-991:flex-col">
-            <div className="flex flex-col gap-y-[15px] w-1/2 max-991:w-full">
-                <div className="text-6xl font-black">Cultivating Success</div>
-                <div className="text-xl w-3/4 text-poppins mt-[25px]">Mashtal is a platform or initiative focused on empowering and supporting women's entrepreneurial ventures, particularly by fostering growth and success in various industries.</div>
-                <div className="text-7xl text-[#DB6D8F] font-black mt-5">Mashtal by Women,</div>
-                <div className="text-7xl text-[#DB6D8F] font-black">for Women</div>
+        <div className="w-[80%] flex items-center justify-center max-1440:w-[95%]">
+            <div className="flex flex-col gap-y-[15px] max-650:gap-y-[7px] w-1/2 max-991:w-full">
+                <div className="text-6xl font-black max-991:text-3xl max-600:text-xl">Cultivating Success</div>
+                <div className="text-xl w-3/4 text-poppins mt-[25px] max-991:text-base  max-600:text-sm">Mashtal is a platform or initiative focused on empowering and supporting women's entrepreneurial ventures, particularly by fostering growth and success in various industries.</div>
+                <div className="text-7xl text-[#DB6D8F] font-black mt-5 max-991:text-3xl max-600:text-xl">Mashtal by Women,</div>
+                <div className="text-7xl text-[#DB6D8F] font-black max-991:text-3xl max-600:text-xl">for Women</div>
             </div>
             <div className="w-1/2">
                 <div className="3/4">
                     <img src={photo1} />
                 </div>
-                <img src={photo2} style={{"marginTop": "-194px","marginLeft": "260px"}}/>
             </div>
         </div>
       </div>

@@ -190,3 +190,13 @@ body{
   background-size: cover;
   background-position: top;
 }
+
+.menu-list.menu-open {
+  transform: translate(-20px);
+  transition: .5s;
+}
+
+.menu-list.menu-close {
+  transform: translate(-300px);
+  transition: .5s;
+}

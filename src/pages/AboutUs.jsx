@@ -26,21 +26,21 @@ const AboutUs = () => {
         <div className="text-xl font-[500] "> Nurture Your Venture for Lasting Success</div>
       </div>
       <div className="w-full flex justify-center py-2">
-        <div className="flex w-[85%] gap-x-8 max-1330:gap-x-[20px] max-1440:w-[95%] py-[70px] border-b border-gray-200 max-991:flex-col">
-            <div className="w-1/2 relative max-991:w-full">
-                <img src={mumbai} className="w-full"/>
+        <div className="flex w-[85%] gap-x-8 max-1330:gap-x-[20px] max-1440:w-[95%] py-[70px] border-b border-gray-200 max-550:flex-wrap max-550:gap-y-[30px]">
+            <div className="w-1/2 max-550:w-full relative">
+                <img src={mumbai} className="w-full min-h-[250px] object-cover rounded-[15px]"/>
                 <div className="absolute flex flex-col p-6 items-start gap-y-[5px] top-0">
-                    <div className="text-4xl font-bold text-white">Mumbai</div>
-                    <div className="text-3xl text-white text-poppins">12 December 2024</div>
-                    <Link className="py-[10px] px-[20px] bg-[#DB6D8F] text-white hover:text-white rounded-full text-lg mt-[10px] tracking-wide text-poppins" to="/book_stalls">Register Now</Link>
+                    <div className="text-4xl font-bold text-white max-768:text-2xl">Mumbai</div>
+                    <div className="text-3xl text-white text-poppins max-768:text-xl">12 December 2024</div>
+                    <Link className="py-[10px] px-[20px] bg-[#DB6D8F] text-white hover:text-white rounded-full text-lg mt-[10px] max-768:mt-0 tracking-wide text-poppins max-768:text-base" to="/book_stalls">Register Now</Link>
                 </div>
             </div>
-            <div className="w-1/2 flex flex-col justify-between max-991:w-full max-991:mt-[20px]">
-                <div className="text-3xl">Last Date: 5 December 2024</div>
-                <div className="flex flex-col gap-y-[30px]">
-                    <div className="w-full border border-black py-[15px] rounded-[14px] flex justify-center text-xl text-poppins">mashtal@busaheba.org</div>
-                    <div className="w-full border border-black py-[15px] rounded-[14px] flex justify-center text-xl text-poppins ">Lokhandwala Com, Andheri West, Mumbai</div>
-                    <div className="w-full border border-black py-[15px] rounded-[14px] flex justify-center text-xl text-poppins">(+91) 725-875-5874</div>
+            <div className="w-1/2 max-550:w-full flex flex-col justify-between ">
+                <div className="text-3xl max-768:text-xl">Last Date: 5 December 2024</div>
+                <div className="flex flex-col gap-y-[30px] max-991:gap-y-[5px]">
+                    <div className="w-full border border-black py-[15px] rounded-[14px] flex justify-center text-xl text-poppins max-991:text-sm max-680:text-center">mashtal@busaheba.org</div>
+                    <div className="w-full border border-black py-[15px] rounded-[14px] flex justify-center text-xl text-poppins max-991:text-sm max-680:text-center">Lokhandwala Com, Andheri West, Mumbai</div>
+                    <div className="w-full border border-black py-[15px] rounded-[14px] flex justify-center text-xl text-poppins max-991:text-sm max-680:text-center">(+91) 725-875-5874</div>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@ const AboutUs = () => {
           <div className="w-[42%] max-991:w-[90%] max-991:items-center  flex flex-col items-start">
             <div className="text-[#DB6D8F] text-xl font-italic">Fostering Mumenaat Success</div>
             <div className="text-2xl font-black uppercase">Empowering Mumenaat</div>
-            <div className="mt-[30px] text-lg text-[#616161]">An initiative by Daerat-ul-Talebaat-ul- Mumenaat Mashtal in Arabic means nursery .Nursery with blooming plants The noble idea of uplifting women entrepreneurs was conceived with the raza and dua mubarak of Shz.Husainah baisaab(D.M). Who envisioned of providing a platform for business and exposure to all the blooming as well as established mumenaat entrepreneurs.</div>
+            <div className="mt-[30px] text-lg text-[#616161] max-991:text-center">An initiative by Daerat-ul-Talebaat-ul- Mumenaat Mashtal in Arabic means nursery .Nursery with blooming plants The noble idea of uplifting women entrepreneurs was conceived with the raza and dua mubarak of Shz.Husainah baisaab(D.M). Who envisioned of providing a platform for business and exposure to all the blooming as well as established mumenaat entrepreneurs.</div>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@ const AboutUs = () => {
           <div className="w-[42%] max-991:w-[90%] max-991:items-center  flex flex-col items-start">
             <div className="text-[#DB6D8F] text-xl font-italic">Empowering Mumenaat</div>
             <div className="text-2xl font-black uppercase">Nurturing Ventures</div>
-            <div className="mt-[30px] text-lg text-[#616161]">The Expo was planned with this very intention as to provide an opportunity to develop small-scale/ household businesses of mumenaat where they use their ‘Hunar’ (skills) to support their families and a way to achieve excellence in their respective fields. With the goal of being a non-profitable project and the ultimate intention to use the finance profited for the development of such industries. Since its commencement in 2018, Mashtal has successfully extended financial support to many rising ventures.</div>
+            <div className="mt-[30px] text-lg text-[#616161] max-991:text-center">The Expo was planned with this very intention as to provide an opportunity to develop small-scale/ household businesses of mumenaat where they use their ‘Hunar’ (skills) to support their families and a way to achieve excellence in their respective fields. With the goal of being a non-profitable project and the ultimate intention to use the finance profited for the development of such industries. Since its commencement in 2018, Mashtal has successfully extended financial support to many rising ventures.</div>
           </div>
           <div className="">
             <img src={nurturing} />
@@ -93,8 +93,8 @@ const AboutUs = () => {
                 <div className="w-[500px] flex flex-col gap-y-[30px] border-r border-gray-300 max-1440:mr-[50px] max-991:flex-row max-991:border-r-0 max-991:items-start max-991:w-full max-991:border-b max-991:pb-[20px]">
                     <div className="min-991:w-[500px] max-991:w-full flex">
                         <div className="min-991:w-[300px] py-[20px] px-[25px] flex flex-col bg-[#DB6D8F] gap-y-[7px] rounded-3xl">
-                            <div className="text-white font-bold text-2xl">Sunday</div>
-                            <div className="text-white text-poppins">12 December 2024</div>
+                            <div className="text-white font-bold text-2xl max-680:text-lg">Sunday</div>
+                            <div className="text-white text-poppins max-680:text-sm">12 December 2024</div>
                         </div>
                         <div className="h-[1px] min-651:w-[190px] 1168-1024:w-[150px] max-991:hidden bg-[#DB6D8F] mt-[30px]"></div>
                         <div className="h-[30px] w-[30px] border-2 rounded-full max-991:hidden border-[#DB6D8F] p-[6px] bg-white mt-[15px]" style={{marginRight:'-15px'}}>
@@ -103,8 +103,8 @@ const AboutUs = () => {
                     </div>
                     <div className="min-991:w-[500px] max-991:w-full flex">
                         <div className="min-991:w-[300px] py-[20px] px-[25px] flex flex-col bg-[#80818080] gap-y-[7px] rounded-3xl">
-                            <div className="text-white font-bold text-2xl">Monday</div>
-                            <div className="text-poppins">13 December 2024</div>
+                            <div className="text-white font-bold text-2xl max-680:text-lg">Monday</div>
+                            <div className="text-poppins max-680:text-sm">13 December 2024</div>
                         </div>
                         <div className="h-[1px] min-651:w-[190px] 1168-1024:w-[150px] max-991:hidden bg-[#db6d9000] mt-[30px]"></div>
                         <div className="h-[30px] w-[30px] border-2 rounded-full max-991:hidden border-[#db6d9000] p-[6px]  mt-[15px]" style={{marginRight:'-15px'}}>
@@ -114,8 +114,8 @@ const AboutUs = () => {
                     </div>
                     <div className="min-991:w-[500px] max-991:w-full flex">
                         <div className="min-991:w-[300px] py-[20px] px-[25px] flex flex-col bg-[#80818080] gap-y-[7px] rounded-3xl">
-                            <div className="text-white font-bold text-2xl">Tuesday</div>
-                            <div className="text-poppins">14 December 2024</div>
+                            <div className="text-white font-bold text-2xl max-680:text-lg">Tuesday</div>
+                            <div className="text-poppins max-680:text-sm">14 December 2024</div>
                         </div>
                         <div className="h-[1px] min-651:w-[190px] 1168-1024:w-[150px] max-991:hidden bg-[#db6d9000] mt-[30px]"></div>
                         <div className="h-[30px] w-[30px] border-2 rounded-full max-991:hidden border-[#db6d9000] p-[6px]  mt-[15px]" style={{marginRight:'-15px'}}>
