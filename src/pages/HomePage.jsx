@@ -72,9 +72,9 @@ const HomePage = () => {
                 <div className="w-[300px] text-2xl font-black uppercase">Find out ongoing exhibition this week</div>
             </div>
             <div className="w-full flex gap-x-[100px] max-1440:gap-x-0 max-1440:justify-between max-991:flex-col">
-                <div className="w-[500px] flex flex-col gap-y-[30px] border-r border-gray-300 max-1440:mr-[50px] max-991:flex-row max-991:border-r-0 max-991:items-start max-991:w-full max-991:border-b max-991:pb-[20px]">
-                    <div className="min-991:w-[500px] max-991:w-full flex">
-                        <div className="min-991:w-[300px] py-[20px] px-[25px] flex flex-col bg-[#DB6D8F] gap-y-[7px] rounded-3xl">
+                <div className="w-[500px] gap-[15px] overflow-x-auto flex flex-col gap-y-[30px] border-r border-gray-300 max-1440:mr-[50px] max-991:flex-row max-991:border-r-0 max-991:items-start max-991:w-full max-991:border-b max-991:pb-[20px]">
+                    <div className="min-991:w-[500px] max-991:w-[300px] flex">
+                        <div className="min-991:w-[300px] py-[20px] min-992:px-[25px] max-991:items-center max-991:w-full max-991:justify-center flex flex-col bg-[#DB6D8F] gap-y-[7px] rounded-3xl">
                             <div className="text-white font-bold text-2xl">Sunday</div>
                             <div className="text-white text-poppins">12 December 2024</div>
                         </div>
@@ -83,8 +83,8 @@ const HomePage = () => {
                             <div className="w-full h-full bg-[#DB6D8F] rounded-full"></div>
                         </div>
                     </div>
-                    <div className="min-991:w-[500px] max-991:w-full flex">
-                        <div className="min-991:w-[300px] py-[20px] px-[25px] flex flex-col bg-[#80818080] gap-y-[7px] rounded-3xl">
+                    <div className="min-991:w-[500px] max-991:w-[300px] flex">
+                        <div className="min-991:w-[300px] py-[20px] min-992:px-[25px] max-991:items-center max-991:w-full max-991:justify-center flex flex-col bg-[#80818080] gap-y-[7px] rounded-3xl">
                             <div className="text-white font-bold text-2xl">Monday</div>
                             <div className="text-poppins">13 December 2024</div>
                         </div>
@@ -94,8 +94,8 @@ const HomePage = () => {
                         </div>
                         {/* <div className="h-[1px] w-[70px] bg-[#DB6D8F]"></div> */}
                     </div>
-                    <div className="min-991:w-[500px] max-991:w-full flex">
-                        <div className="min-991:w-[300px] py-[20px] px-[25px] flex flex-col bg-[#80818080] gap-y-[7px] rounded-3xl">
+                    <div className="min-991:w-[500px] max-991:w-[300px] flex">
+                        <div className="min-991:w-[300px] py-[20px] min-992:px-[25px] max-991:items-center max-991:w-full max-991:justify-center flex flex-col bg-[#80818080] gap-y-[7px] rounded-3xl">
                             <div className="text-white font-bold text-2xl">Tuesday</div>
                             <div className="text-poppins">14 December 2024</div>
                         </div>
@@ -132,7 +132,7 @@ const HomePage = () => {
                 <div className="w-[300px] text-2xl font-black uppercase mt-[10px]">Celebrating Success</div>
                 <div className="text-2xl font-black uppercase">A Look Back at Exhibition</div>
             </div>
-            <div className="w-full grid grid-cols-3 gap-[50px]"> 
+            <div className="w-full grid grid-cols-3 gap-[50px] max-768:grid-cols-2"> 
                 <div className="relative rounded-[40px] gallery-image h-[350px]">
                     <img src={mumbai2} className="w-full object-cover h-full rounded-[40px]"/>
                     <div className="play-button absolute bottom-0 w-full flex justify-between p-[40px] items-end bg-gradient-to-t from-black rounded-[40px]">
@@ -207,7 +207,7 @@ const HomePage = () => {
                 <div className="text-2xl font-black uppercase">A Journey Through Art and Innovation</div>
             </div>
             <div className="flex w-full justify-between">
-                <div className="p-[20px] bg-[#F1F1F1] flex flex-col rounded-[35px] gap-y-[10px] w-[49%]">
+                <div className="p-[20px] bg-[#F1F1F1] flex flex-col rounded-[35px] gap-y-[10px] w-[49%] max-991:hidden">
                     <img src={blog2} className="object-cover rounded-[20px]"/>
                     <div className="flex flex-col items-start gap-y-[15px]">
                         <div className="text-lg font-bold">At vero eos et accusamus et iusto odio</div>
@@ -216,7 +216,7 @@ const HomePage = () => {
                             <div className="text-[#547CC5]">Read More</div>
                             <Icons string="arrow" />
                         </div>
-                        <div className="w-full grid grid-cols-3 gap-x-[10px]">
+                        <div className="w-full flex max-991:flex-col gap-[10px]">
                             <div className="flex gap-x-[5px] items-center">
                                 <Icons string="calendar" />
                                 <div className="">15 Feb 2024</div>
@@ -232,14 +232,17 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col gap-y-[20px] max-1330:gap-y-[20px] w-[49%]">
-                    <div className="p-[25px] bg-[#F1F1F1] flex rounded-[35px] gap-x-[20px] items-start max-1330:flex-col">
-                        <img src={blog2} className="object-cover rounded-[20px] w-[40%]" />
-                        <div className="flex flex-col gap-y-[20px]">
-                            <div className="text-lg font-bold">At vero eos et accusamus et</div>
+                <div className="flex flex-col gap-y-[20px] max-1330:gap-y-[20px] w-[49%] max-991:w-[90%] min-w-[320px]">
+                    <div className="p-[20px] bg-[#F1F1F1] flex flex-col rounded-[35px] gap-y-[10px] min-992:hidden">
+                        <img src={blog2} className="object-cover rounded-[20px]"/>
+                        <div className="flex flex-col items-start gap-y-[15px]">
+                            <div className="text-lg font-bold">At vero eos et accusamus et iusto odio</div>
                             <div className="text-lg capitalize">At vero eos et accusamus et iusto odio dignissimos ducimus  blanditiis deleniti atque corrupti...</div>
-                            <div className="h-[1px] w-full bg-[#949AAF]"></div>
-                            <div className="w-full grid grid-cols-3 gap-x-[10px]">
+                            <div className="flex gap-x-[5px] items-center">
+                                <div className="text-[#547CC5]">Read More</div>
+                                <Icons string="arrow" />
+                            </div>
+                            <div className="w-full flex max-991:flex-col gap-[10px]">
                                 <div className="flex gap-x-[5px] items-center">
                                     <Icons string="calendar" />
                                     <div className="">15 Feb 2024</div>
@@ -261,7 +264,29 @@ const HomePage = () => {
                             <div className="text-lg font-bold">At vero eos et accusamus et</div>
                             <div className="text-lg capitalize">At vero eos et accusamus et iusto odio dignissimos ducimus  blanditiis deleniti atque corrupti...</div>
                             <div className="h-[1px] w-full bg-[#949AAF]"></div>
-                            <div className="w-full grid grid-cols-3 gap-x-[10px]">
+                            <div className="w-full flex max-991:flex-col gap-[10px]">
+                                <div className="flex gap-x-[5px] items-center">
+                                    <Icons string="calendar" />
+                                    <div className="">15 Feb 2024</div>
+                                </div>
+                                <div className="flex gap-x-[5px] items-center">
+                                    <Icons string="category" />
+                                    <div className="">Category</div>
+                                </div>
+                                <div className="flex gap-x-[5px] items-center">
+                                    <Icons string="profile" />
+                                    <div className="">Adam Smith</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="p-[25px] bg-[#F1F1F1] flex rounded-[35px] gap-x-[20px] items-start max-1330:flex-col">
+                        <img src={blog2} className="object-cover rounded-[20px] w-[40%]" />
+                        <div className="flex flex-col gap-y-[20px]">
+                            <div className="text-lg font-bold">At vero eos et accusamus et</div>
+                            <div className="text-lg capitalize">At vero eos et accusamus et iusto odio dignissimos ducimus  blanditiis deleniti atque corrupti...</div>
+                            <div className="h-[1px] w-full bg-[#949AAF]"></div>
+                            <div className="w-full flex max-991:flex-col gap-[10px]">
                                 <div className="flex gap-x-[5px] items-center">
                                     <Icons string="calendar" />
                                     <div className="">15 Feb 2024</div>
